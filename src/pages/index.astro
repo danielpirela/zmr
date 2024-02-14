@@ -1,7 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import products from "../utils/data.json"
+import { Shop } from "../components/Shop.tsx"
 ---
 
 <Layout title="zmr">
-  <main></main>
+  <main
+    class="min-w-full min-h-screen bg-gray-50 flex flex-col justify-center items-center"
+  >
+    <h1 class="text-4xl font-medium mb-3 mt-1 text-center">Catalogo</h1>
+    <div class="flex justify-center items-center flex-col">
+      <Shop data={products.products} client:load />
+    </div>
+  </main>
 </Layout>
+
+<style>
+  h1 {
+    font-family: "Voga";
+  }
+</style>

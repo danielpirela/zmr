@@ -1,0 +1,23 @@
+---
+interface Props {
+  category: string
+}
+const { category } = Astro.props
+---
+
+<button
+  id="a"
+  class="ring-primary ring-2 rounded-full px-3 hover:bg-primary hover:scale-110 duration-500 transition-all hover:mx-2 hover:text-white font-semibold"
+>
+  {category}
+</button>
+
+<script>
+  const l = () => {
+    console.log("a")
+  }
+  const button = document.querySelector("#a")
+  button.addEventListener("click", () => {
+    l()
+  })
+</script>
