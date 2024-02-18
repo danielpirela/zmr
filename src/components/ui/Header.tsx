@@ -1,12 +1,11 @@
 import {Logo} from './Logo.tsx'
-import { DarkMode } from './DarkMode'
 import { useState } from 'react'
 export function Header() {
-    const [isHidden, setIsHidden] = useState(false)
+    const [isHidden, setIsHidden] = useState(true)
     const HiddenHandler = () => setIsHidden(!isHidden)
 
     return (
-        <nav className='bg-transparent border-gray-200 dark:bg-gray-900 flex min-w-full justify-between shadow-lg'>
+        <nav className='bg-transparent border-gray-200 dark:bg-gray-900 flex min-w-full justify-between shadow-lg transition-all delay-300 duration-300 animate-fade-down'>
             <div className='flex flex-wrap items-center justify-between mx-0 p-4 flex-2 w-full'>
                 <a href={'/'} className='flex-1 w-auto'>
                     <Logo />
@@ -37,7 +36,7 @@ export function Header() {
                     </svg>
                 </button>
                 <div
-                    className={`w-full md:flex md:w-auto ${isHidden ? 'hidden' : ''}`}
+                    className={`w-full md:flex md:w-auto ${isHidden ? 'hidden' : ''}  transition-all delay-300 duration-300 animate-fade-down`}
                     id='navbar-default'
                 >
                     <ul className='font-medium flex flex-col justify-center items-center p-4 py-8 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 '>
@@ -60,13 +59,13 @@ export function Header() {
                         </li>
                         <li>
                             <a
-                                href='/#contact'
+                                href='/contact'
                                 className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-110 transition-all duration-200 '
                             >
                                 Contact
                             </a>
                         </li>
-                        <li>
+                        <li className='hidden'>
                             <a
                                 href='/login'
                                 className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-110 transition-all duration-200'
@@ -74,7 +73,7 @@ export function Header() {
                                 Login
                             </a>
                         </li>
-                        <li className='px-3 py-2 flex items-center justify-center rounded-md hover:scale-110 transition-all duration-200 md:bg-[#603721] md:text-white bg-transparent dark:text-white text-gray-900'>
+                        <li className='hidden px-3 py-2  items-center justify-center rounded-md hover:scale-110 transition-all duration-200 md:bg-[#603721] md:text-white bg-transparent dark:text-white text-gray-900'>
                             <a
                                 href='/register'
                                 className='block rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'

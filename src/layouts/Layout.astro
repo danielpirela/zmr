@@ -18,6 +18,10 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
+  <script
+    is:inline
+    src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+  ></script>
   <body class="justify-center items-center flex">
     <div class="relative flex min-w-full min-h-screen flex-col">
       <Header client:load />

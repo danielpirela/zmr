@@ -2,12 +2,14 @@ import { atom, map } from "nanostores"
 
 // ? Types for slices
 
-interface categorySlice {
+interface Product {
   category: string
+  id: string
 }
 
 export const $isLogged = atom<boolean>(false)
 
-export const $category = map<categorySlice>({
+export const $product = map<Product>({
   category: "ZMR CLUB",
+  id: "",
 })
