@@ -11,7 +11,7 @@ export const social: Social[] = [
     href: "https://www.tiktok.com/@zmrclub?_t=8jzXdxTZfNu&_r=1",
   },
   {
-    name: "Instargram",
+    name: "Instagram",
     src: "/images/ig.webp",
     href: "https://www.instagram.com/zmr.club?igsh=MWxmbmJyMDRqamp5eQ%3D%3D&utm_source=qr",
   },
