@@ -1,0 +1,18 @@
+---
+const { src, href, name } = Astro.props
+---
+
+<article
+  class="shadow-lg flex justify-center items-center flex-col p-2 pb-4 rounded-lg"
+>
+  <img
+    src={src}
+    alt={`Qr of ${name} for contact`}
+    class="aspect-auto max-w-[300px]"
+  />
+  <a
+    href={href}
+    class="py-1 mx-2 rounded-lg bg-primary text-xl font-semibold text-white block w-3/4 text-center mt-4 hover:scale-105 transition-all delay-300 duration-300 shadow-lg"
+    >Visitar</a
+  >
+</article>

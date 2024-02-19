@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro"
 import products from "../utils/data.json"
 import { Shop } from "../components/Shop.tsx"
-import { Modal } from "../components/Modal"
 ---
 
 <Layout title="zmr">
@@ -11,7 +10,7 @@ import { Modal } from "../components/Modal"
   >
     <h1 class="text-4xl font-medium mb-3 mt-1 text-center">Catalogo</h1>
     <div class="flex justify-center items-center flex-col">
-      <Shop data={products.products} client:load />
+      <Shop data={products.products} client:only />
     </div>
   </main>
 </Layout>

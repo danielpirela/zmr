@@ -24,7 +24,7 @@ const { title } = Astro.props
   ></script>
   <body class="justify-center items-center flex">
     <div class="relative flex min-w-full min-h-screen flex-col">
-      <Header client:load />
+      <Header client:visible />
       <slot />
       <Footer />
     </div>

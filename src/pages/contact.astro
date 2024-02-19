@@ -1,1 +1,18 @@
-<div>hello</div>
+---
+import Layout from "../layouts/Layout.astro"
+import CardSocial from "../components/ui/CardSocial.astro"
+import { social } from "../utils/social.ts"
+---
+
+<Layout title="Contact">
+  <div
+    class="min-w-full min-h-screen mt-4 flex flex-col md:flex-row justify-center items-center gap-3"
+  >
+    {
+      social.map((media) => {
+        const { href, src } = media
+        return <CardSocial src={src} href={href} />
+      })
+    }
+  </div>
+</Layout>

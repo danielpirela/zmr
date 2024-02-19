@@ -23,7 +23,6 @@ export function Card({products} : Props) {
 
   return (
     <>
-
     <Modal data={products} isHidden={isHidden}>
     <button
                 type="button"
@@ -46,7 +45,7 @@ export function Card({products} : Props) {
     <article className='flex justify-center items-center flex-col min-w-full min-h-auto'>
     {
       products.map((product : Product) =>{
-        const {available,id,image,name,price} = product
+        const {id,image,name,price, avaliableModels} = product
         if (product.category === String($protc.category)){
           return (
             <div key={id} className='shadow-xl rounded-lg my-4 py-4 px-2 translate-x-1 animate-fade-right delay-300 duration-500 transition-all'>
@@ -62,9 +61,9 @@ export function Card({products} : Props) {
             className='aspect-square max-w-72 max-h-72 rounded-lg'
             />
           </button>
-          <h3>{name}</h3>
-          <p>{price}</p>
-          <p>disponible: {available}</p>
+          <h3 className='font-semibold text-xl'>{name}</h3>
+          <p className='font-semibold text-lg'>{`${price}$`}</p>
+          <p className='font-medium text-black/90'>Disponible: {avaliableModels}</p>
           <div className='flex justify-center items-center'>
           <a
             href='https://wa.me/584246077878'

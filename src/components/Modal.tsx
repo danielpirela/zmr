@@ -1,17 +1,11 @@
 import { useStore } from '@nanostores/react'
-import {useState} from 'react'
-
-import { Card } from './Card'
-import { MenuIcon } from './ui/icons/Menu'
-import { SearchIcon } from './ui/icons/Search'
-
 import type { Product } from '../utils/types'
 import { $product } from '../store/useStore'
 
 interface Props {
     data: Product[]
     isHidden: boolean
-    children: any[]
+    children: React.ReactNode
 }
 
 export function Modal({data , isHidden , children}: Props){
