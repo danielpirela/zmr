@@ -15,7 +15,7 @@ interface Props {
 export function Shop ({data}: Props) {
 
   const $protc = useStore($product)
-  let categories = ['ZMR', 'LDR','SANRIO']
+  let categories = ['ZMR', 'LDR','SANRIO','FABS','CILA']
   const [isView, setIsView] = useState<boolean>(false)
   const handleCategory = ({e,category}: {e:any, category:string}) => {
     e.preventDefault()
@@ -38,14 +38,14 @@ export function Shop ({data}: Props) {
         }>
           <MenuIcon />
           {
-            <ul className={` flex flex-col justify-center items-center gap-2 ml-2 ${isView ? '' : 'hidden'} transition-all delay-300 duration-300 animate-fade-right flex-1 `}>
+            <ul className={` grid grid-cols-2 justify-center items-center gap-2 ml-2 ${isView ? '' : 'hidden'} transition-all delay-300 duration-300 animate-fade-right flex-1 `}>
               {
                 categories.map((category: string) => {
                   return (
                     <button
                     key={category}
                     onClick={(e) => handleCategory({e,category})}
-                    className={` w-full first:rounded-t-md px-2 `}
+                    className={` w-full `}
                     >
                       <p className={`hover:text-lg transition-all delay-300 duration-300 ring-primary ring-2 rounded-full px-2 ${category === $protc.category ? 'bg-primary text-white' : 'bg-transparent text-gray-700'}`}>{category}</p>
                     </button>
@@ -55,16 +55,16 @@ export function Shop ({data}: Props) {
             </ul>
           }
           </button>
-        <ul className="flex gap-2 justify-center items-center animate-fade-left transition-all delay-300 duration-300 ">
+        <ul className="flex gap-1 justify-center items-center animate-fade-left transition-all delay-300 duration-300 p-1">
         {
-            categories.map((category: string) => {
+            categories.map((category: string , index) => {
                   return (
                     <button
                     key={category}
                     onClick={(e)=> {
                       handleCategory({e,category})
                     }}
-                    className={`${category === $protc.category ?  'ring-primary ring-2' : " "} ${isView ?  'hidden' : ""}  rounded-full px-3 hover:bg-primary hover:scale-110 animate-fade hover:mx-2 hover:duration-500 hover:text-white font-semibold text-nowrap`}
+                    className={`${index > 3 ? 'hidden' : ''} ${category === $protc.category ?  'ring-primary ring-2' : " "} ${isView ?  'hidden' : ""}  rounded-full px-2 hover:bg-primary hover:scale-105 animate-fade hover:mx-2 hover:duration-500 hover:text-white font-semibold text-nowrap`}
                     >
                 {category}
                 </button>
