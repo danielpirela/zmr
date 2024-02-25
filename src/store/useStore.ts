@@ -10,6 +10,6 @@ interface Product {
 export const $isLogged = atom<boolean>(false)
 
 export const $product = map<Product>({
-  category: "ZMR CLUB",
+  category: "ZMR",
   id: "",
 })

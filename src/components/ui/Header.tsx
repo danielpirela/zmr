@@ -27,7 +27,7 @@ export function Header() {
                         viewBox='0 0 17 14'
                     >
                         <path
-                            stroke='currentColor'
+                            stroke='#000'
                             strokeLinecap='round'
                             strokeLinejoin='round'
                             strokeWidth='2'

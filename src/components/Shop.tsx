@@ -6,6 +6,7 @@ import { MenuIcon } from './ui/icons/Menu'
 import { SearchIcon } from './ui/icons/Search'
 
 import type { Product } from '../utils/types'
+import { useState } from 'react'
 
 interface Props {
     data: Product[]
@@ -14,8 +15,8 @@ interface Props {
 export function Shop ({data}: Props) {
 
   const $protc = useStore($product)
-  let categories = ['ZMR CLUB', 'LANA DEL REY']
-
+  let categories = ['ZMR', 'LDR','SANRIO']
+  const [isView, setIsView] = useState<boolean>(false)
   const handleCategory = ({e,category}: {e:any, category:string}) => {
     e.preventDefault()
     $product.setKey('category', category)
@@ -24,21 +25,46 @@ export function Shop ({data}: Props) {
   return (
     <>
     <nav
-      className="flex justify-center items-center flex-col gap-2 min-w-full mb-10"
+      className="flex justify-center items-center flex-col gap-2 min-h-20  mb-10 p-2"
     >
 
-    <div className="justify-center items-center gap-4 flex min-w-full">
+    <div className={`justify-center ${isView ? 'items-start ' : 'items-center'} gap-4 flex `}>
         <button><SearchIcon /></button>
-        <button><MenuIcon /></button>
-        <ul className="flex gap-2 justify-center items-center">
+        <button className="flex justify-start items-start" onClick={
+          (e) => {
+            e.preventDefault()
+            setIsView(!isView)
+          }
+        }>
+          <MenuIcon />
+          {
+            <ul className={` flex flex-col justify-center items-center gap-2 ml-2 ${isView ? '' : 'hidden'} transition-all delay-300 duration-300 animate-fade-right flex-1 `}>
+              {
+                categories.map((category: string) => {
+                  return (
+                    <button
+                    key={category}
+                    onClick={(e) => handleCategory({e,category})}
+                    className={` w-full first:rounded-t-md px-2 `}
+                    >
+                      <p className={`hover:text-lg transition-all delay-300 duration-300 ring-primary ring-2 rounded-full px-2 ${category === $protc.category ? 'bg-primary text-white' : 'bg-transparent text-gray-700'}`}>{category}</p>
+                    </button>
+                  )
+                })
+              }
+            </ul>
+          }
+          </button>
+        <ul className="flex gap-2 justify-center items-center animate-fade-left transition-all delay-300 duration-300 ">
         {
             categories.map((category: string) => {
                   return (
                     <button
+                    key={category}
                     onClick={(e)=> {
                       handleCategory({e,category})
                     }}
-                    className={`${category === $protc.category ?  'ring-primary ring-2' : " "} rounded-full px-3 hover:bg-primary hover:scale-110 duration-500 transition-all hover:mx-2 hover:text-white font-semibold`}
+                    className={`${category === $protc.category ?  'ring-primary ring-2' : " "} ${isView ?  'hidden' : ""}  rounded-full px-3 hover:bg-primary hover:scale-110 animate-fade hover:mx-2 hover:duration-500 hover:text-white font-semibold text-nowrap`}
                     >
                 {category}
                 </button>

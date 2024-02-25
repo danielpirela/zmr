@@ -1,16 +1,7 @@
 {
     "products": [
       {
-        "category": "ZMR CLUB",
-        "name": "My ex is my bigger fan",
-        "id": "123456",
-        "price": 10.00,
-        "available": true,
-        "avaliableModels": "blanco",
-        "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2Fw5skgl5gmop.webp?alt=media&token=8b8eabd9-0c19-4eed-9f7e-2a1f9f41ebfd"
-      },
-      {
-        "category": "LANA DEL REY",
+        "category": "LDR",
         "name": "ZMR| LANA DEL REY",
         "id": "789012",
         "price": 10.00,
@@ -19,7 +10,7 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2Fhabqi8r5kxw.webp?alt=media&token=0b2bc67a-5a42-4fa7-9776-2ac219161f87"
       },
       {
-        "category": "LANA DEL REY",
+        "category": "LDR",
         "name": "ZMR| LANA DEL REY",
         "id": "789013",
         "price": 10.00,
@@ -28,7 +19,7 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2F7zklllrbctr.webp?alt=media&token=994aff8f-310c-43e8-ac02-35dfb054d527"
       },
       {
-        "category": "LANA DEL REY",
+        "category": "LDR",
         "name": "ZMR| LANA DEL REY",
         "id": "789018",
         "price": 10.00,
@@ -37,13 +28,77 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2F5dw4979v25b.webp?alt=media&token=d7e16687-54a7-42e8-aafe-6cf56fffa29b"
       },
       {
-        "category": "LANA DEL REY",
+        "category": "LDR",
         "name": "ZMR| LANA DEL REY",
         "id": "789017",
         "price": 10.00,
         "available": true,
         "avaliableModels": "blanco",
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2F14c6yu9g77x.webp?alt=media&token=3928f849-0269-4402-ab45-44fea411a3c5"
+      },
+      {
+        "category": "ZMR",
+        "name": "ZMR| BABY TEES",
+        "id": "784017",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "negro",
+        "image": "https://i.imgur.com/N5EtvuY.png"
+      },
+      {
+        "category": "ZMR",
+        "name": "ZMR X FABS| BABY TEES",
+        "id": "689011",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "negro",
+        "image": "https://i.imgur.com/5ZLk3mm.png"
+      },
+      {
+        "category": "ZMR",
+        "name": "ZMR| BABY TEES",
+        "id": "789019",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "negro",
+        "image": "https://i.imgur.com/KyNqucP.png"
+      },
+
+      {
+        "category": "ZMR",
+        "name": "ZMR| BABY TEES",
+        "id": "785017",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "negro",
+        "image": "https://i.imgur.com/lgrzViR.png"
+      },
+      {
+        "category": "ZMR",
+        "name": "ZMR| BABY TEES",
+        "id": "789011",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "negro",
+        "image": "https://i.imgur.com/m4TOZ8x.png"
+      },
+      {
+        "category": "SANRIO",
+        "name": "ZMR X SANRIO| BABY TEES",
+        "id": "788011",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "rosa",
+        "image": "https://i.imgur.com/uRah82E.png"
+      },
+      {
+        "category": "SANRIO",
+        "name": "ZMR X SANRIO| BABY TEES",
+        "id": "787011",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "rojo",
+        "image": "https://i.imgur.com/hpsfvvP.png"
       }
     ]
   }

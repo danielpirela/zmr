@@ -17,7 +17,6 @@ export function DarkMode() {
     }, [theme, isActive])
 
     const handleChange = () => {
-        //button?.classList.toggle('active')
         setIsActive(!isActive)
         setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'))
     }

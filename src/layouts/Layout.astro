@@ -40,7 +40,9 @@ const { title } = Astro.props
   html {
     scroll-behavior: smooth;
   }
-
+  ::-webkit-scrollbar {
+    border: none;
+  }
   .animated {
     animation: rotation 2s infinite linear;
   }

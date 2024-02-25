@@ -22,7 +22,7 @@ export function Modal({data , isHidden , children}: Props){
             data.map((product: Product) => {
               if (product.id === $protc.id && isHidden === false) {
                 return (
-                  <img src={product.image} className={`aspect-square max-w-lg max-h-auto rounded-lg transition-all animate-fade-up delay-300 duration-300 ${isHidden ? 'translate-x-[-50px]' : ''}`}/>
+                  <img  key={product.id} src={product.image} className={`aspect-square max-x-md md:max-w-lg max-h-auto rounded-lg transition-all animate-fade-up delay-300 duration-300 ${isHidden ? 'translate-x-[-50px]' : ''}`}/>
                   )
               }
             })
