@@ -51,7 +51,7 @@ export function Card({products} : Props) {
         const {id,image,name,price, avaliableModels} = product
         if (product.category === String($protc.category)){
           return (
-            <div key={id} className='shadow-xl rounded-lg my-4 py-4 px-2 translate-x-1 animate-fade-right delay-300 duration-500 transition-all'>
+            <div key={id} className='shadow-xl shadow-primary/15 rounded-lg my-4 py-4 px-4 translate-x-1 animate-fade-right delay-300 duration-500 transition-all ring-1 ring-primary/10'>
             <button
             onClick={(e)=>{
               handleId(e,id)
@@ -64,14 +64,14 @@ export function Card({products} : Props) {
             className='aspect-square max-w-72 max-h-72 rounded-lg'
             />
           </button>
-          <h3 className='font-semibold text-xl'>{name}</h3>
-          <p className='font-semibold text-lg'>{`${price}$`}</p>
+          <h3 className='font-bold text-xl mt-2'>{name}</h3>
+          <p className='font-semibold text-black/90'>{`${price}$`}</p>
           <p className='font-medium text-black/90'>Disponible: {avaliableModels}</p>
           <div className='flex justify-center items-center'>
           <a
             href='https://wa.me/584246077878'
             target='blank'
-            className='flex shadow-lg py-2 px-4 mt-2 justify-center items-center rounded-md  hover:scale-110 hover:bg-primary hover:text-white transition-all'>
+            className='flex shadow-lg py-2 px-4 my-4 justify-center items-center rounded-md  hover:scale-110 hover:bg-primary hover:shadow-primary/50 hover:text-white transition-all ring-1 ring-primary/5'>
             <Cart/>
             <p>Realizar pedido</p>
           </a>

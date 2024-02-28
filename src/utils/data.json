@@ -6,7 +6,7 @@
         "id": "789012",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "blanco",
+        "avaliableModels": "Blanco",
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2Fhabqi8r5kxw.webp?alt=media&token=0b2bc67a-5a42-4fa7-9776-2ac219161f87"
       },
       {
@@ -15,7 +15,7 @@
         "id": "789013",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "blanco",
+        "avaliableModels": "Blanco",
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2F7zklllrbctr.webp?alt=media&token=994aff8f-310c-43e8-ac02-35dfb054d527"
       },
       {
@@ -24,7 +24,7 @@
         "id": "789018",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "blanco",
+        "avaliableModels": "Blanco",
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2F5dw4979v25b.webp?alt=media&token=d7e16687-54a7-42e8-aafe-6cf56fffa29b"
       },
       {
@@ -33,7 +33,7 @@
         "id": "789017",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "blanco",
+        "avaliableModels": "Blanco",
         "image": "https://firebasestorage.googleapis.com/v0/b/mareaalcalina-f1545.appspot.com/o/Marea-Alcalina-Images%2FGWJAPNWB2GbIgcZ0oXrj8dl7Oei1%2FXmbGBQpP3CmINoBnDVbP%2F14c6yu9g77x.webp?alt=media&token=3928f849-0269-4402-ab45-44fea411a3c5"
       },
       {
@@ -42,7 +42,7 @@
         "id": "784017",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "negro",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/N5EtvuY.png"
       },
       {
@@ -51,7 +51,7 @@
         "id": "689011",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "negro",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/5ZLk3mm.png"
       },
       {
@@ -60,7 +60,7 @@
         "id": "489011",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "negro",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/5ZLk3mm.png"
       },
       {
@@ -69,7 +69,7 @@
         "id": "789019",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "negro",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/KyNqucP.png"
       },
 
@@ -79,7 +79,7 @@
         "id": "785017",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "negro",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/lgrzViR.png"
       },
       {
@@ -88,7 +88,7 @@
         "id": "789011",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "negro",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/m4TOZ8x.png"
       },
       {
@@ -97,7 +97,7 @@
         "id": "788011",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "rosa",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/uRah82E.png"
       },
       {
@@ -106,7 +106,7 @@
         "id": "787011",
         "price": 10.00,
         "available": true,
-        "avaliableModels": "rojo",
+        "avaliableModels": "Negro",
         "image": "https://i.imgur.com/hpsfvvP.png"
       }
     ]
