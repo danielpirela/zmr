@@ -23,7 +23,9 @@ const { title } = Astro.props
     src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
   ></script>
   <body class="justify-center items-center flex">
-    <div class="relative flex min-w-full min-h-screen flex-col overflow-hidden">
+    <div
+      class="relative flex min-w-full min-h-screen flex-col overflow-hidden bg-slate-50"
+    >
       <Header client:visible />
       <slot />
       <Footer />

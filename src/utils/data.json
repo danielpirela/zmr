@@ -38,7 +38,7 @@
       },
       {
         "category": "ZMR",
-        "name": "ZMR| BABY TEES",
+        "name": "ZMR| BABY TEE",
         "id": "784017",
         "price": 10.00,
         "available": true,
@@ -47,25 +47,7 @@
       },
       {
         "category": "ZMR",
-        "name": "ZMR X FABS| BABY TEES",
-        "id": "689011",
-        "price": 10.00,
-        "available": true,
-        "avaliableModels": "Negro",
-        "image": "https://i.imgur.com/5ZLk3mm.png"
-      },
-      {
-        "category": "FABS",
-        "name": "ZMR X FABS| BABY TEES",
-        "id": "489011",
-        "price": 10.00,
-        "available": true,
-        "avaliableModels": "Negro",
-        "image": "https://i.imgur.com/5ZLk3mm.png"
-      },
-      {
-        "category": "ZMR",
-        "name": "ZMR| BABY TEES",
+        "name": "ZMR| BABY TEE",
         "id": "789019",
         "price": 10.00,
         "available": true,
@@ -75,7 +57,7 @@
 
       {
         "category": "ZMR",
-        "name": "ZMR| BABY TEES",
+        "name": "ZMR| BABY TEE",
         "id": "785017",
         "price": 10.00,
         "available": true,
@@ -84,7 +66,7 @@
       },
       {
         "category": "ZMR",
-        "name": "ZMR| BABY TEES",
+        "name": "ZMR| BABY TEE",
         "id": "789011",
         "price": 10.00,
         "available": true,
@@ -93,7 +75,7 @@
       },
       {
         "category": "SANRIO",
-        "name": "ZMR X SANRIO| BABY TEES",
+        "name": "ZMR X SANRIO| BABY TEE",
         "id": "788011",
         "price": 10.00,
         "available": true,
@@ -102,12 +84,39 @@
       },
       {
         "category": "SANRIO",
-        "name": "ZMR X SANRIO| BABY TEES",
+        "name": "ZMR X SANRIO| BABY TEE",
         "id": "787011",
         "price": 10.00,
         "available": true,
         "avaliableModels": "Negro",
         "image": "https://i.imgur.com/hpsfvvP.png"
+      },
+      {
+        "category": "FABS",
+        "name": "ZMR X FABS| BABY TEE",
+        "id": "489011",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "Negro",
+        "image": "https://i.imgur.com/5ZLk3mm.png"
+      },
+      {
+        "category": "NEW",
+        "name": "ZMR | BABY TEE",
+        "id": "389011",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "Blanco",
+        "image": "https://i.imgur.com/s7pwPvS.png"
+      },
+      {
+        "category": "NEW",
+        "name": "ZMR | BABY TEE",
+        "id": "289011",
+        "price": 10.00,
+        "available": true,
+        "avaliableModels": "Blanco",
+        "image": "https://i.imgur.com/5ATtySz.png"
       }
     ]
   }
