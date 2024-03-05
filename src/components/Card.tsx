@@ -1,10 +1,11 @@
+import { useState } from 'react'
 import type { Product } from "../utils/types"
-import {Cart} from "./ui/icons/Cart"
-
 import { useStore } from '@nanostores/react'
 import { $product} from '../store/useStore'
+
+import {Cart} from "./ui/icons/Cart"
 import { Modal } from './Modal'
-import { useState } from 'react'
+import { ColorPicker } from './ui/ColorPicker'
 
 interface Props {
   products: Product[]
@@ -66,7 +67,7 @@ export function Card({products} : Props) {
           </button>
           <h3 className='font-bold text-xl mt-2'>{name}</h3>
           <p className='font-semibold text-black/90'>{`${price}$`}</p>
-          <p className='font-medium text-black/90'>Disponible: {avaliableModels}</p>
+          <ColorPicker avaliableModels={avaliableModels}/>
           <div className='flex justify-center items-center'>
           <a
             href='https://wa.me/584246077878'

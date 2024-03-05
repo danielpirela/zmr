@@ -57,11 +57,13 @@ export function Shop ({data}: Props) {
           </button>
         <ul className="flex gap-1 justify-center items-center animate-fade-left transition-all delay-300 duration-300 p-1">
         {
+          categories && (
+
             categories.map((category: string , index) => {
-                  return (
-                    <button
-                    key={category}
-                    onClick={(e)=> {
+              return (
+                <button
+                key={category}
+                onClick={(e)=> {
                       handleCategory({e,category})
                     }}
                     className={`${index > 3 ? 'hidden' : ''} ${category === $protc.category ?  'ring-primary ring-2' : " "} ${isView ?  'hidden' : ""}  rounded-full px-2 hover:bg-primary hover:scale-105 animate-fade hover:mx-2 hover:duration-500 hover:text-white font-semibold text-nowrap`}
@@ -70,6 +72,7 @@ export function Shop ({data}: Props) {
                 </button>
               )
             })
+            )
           }
         </ul>
     </div>
