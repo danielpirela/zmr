@@ -70,7 +70,7 @@ export function Card({products} : Props) {
           <ColorPicker avaliableModels={avaliableModels}/>
           <div className='flex justify-center items-center'>
           <a
-            href='https://wa.me/584246077878'
+            href='https://wa.me/584246488057'
             target='blank'
             className='flex shadow-lg py-2 px-4 my-4 justify-center items-center rounded-md  hover:scale-110 hover:bg-primary hover:shadow-primary/50 hover:text-white transition-all ring-1 ring-primary/5'>
             <Cart/>
