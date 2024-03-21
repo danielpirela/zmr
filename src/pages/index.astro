@@ -2,13 +2,15 @@
 import Layout from "../layouts/Layout.astro"
 import products from "../utils/data.json"
 import { Shop } from "../components/Shop.tsx"
+import Hero from "../components/ui/Hero.astro"
 ---
 
 <Layout title="zmr">
   <main
-    class="min-w-full min-h-screen bg-gray-50 flex flex-col justify-center items-center mt-4"
+    class="min-w-full min-h-screen bg-gray-50 flex flex-col justify-center items-center"
   >
-    <h1 class="text-4xl font-medium mb-3 mt-1 text-center">Catálogo</h1>
+    <Hero />
+    <h1 class="text-4xl font-medium mb-3 mt-20 text-center">Catálogo</h1>
     <div class="flex justify-center items-center flex-col min-w-full">
       <Shop data={products.products} client:only />
     </div>

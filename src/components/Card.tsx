@@ -11,6 +11,11 @@ interface Props {
   products: Product[]
 }
 
+interface Color {
+  name: string
+  hex: string
+}
+
 export function Card({products} : Props) {
 
   const $protc  = useStore($product)
@@ -18,8 +23,6 @@ export function Card({products} : Props) {
 
   const handleId = (e:any, id : string) => {
     $product.setKey('id' , id)
-    console.log($protc)
-
   }
 
   return (
@@ -50,6 +53,11 @@ export function Card({products} : Props) {
     {
       products.map((product : Product) =>{
         const {id,image,name,price, avaliableModels} = product
+
+        const colors : Color[] = [
+          { name : 'Blanco',hex: '#fff' },
+          { name : 'Negro', hex: '#000' }
+        ]
         if (product.category === String($protc.category)){
           return (
             <div key={id} className='shadow-xl shadow-primary/15 rounded-lg my-4 py-4 px-4 translate-x-1 animate-fade-right delay-300 duration-500 transition-all ring-1 ring-primary/10'>
