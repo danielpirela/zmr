@@ -4,9 +4,6 @@ interface Props {
 
 export const ColorPicker = ({avaliableModels}: any) => {
 
-    console.log(avaliableModels)
-
-
   return (
             <div className='flex min-w-full min-h-auto gap-2 justify-start items-center'
             >

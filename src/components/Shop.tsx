@@ -15,7 +15,7 @@ interface Props {
 export function Shop ({data}: Props) {
 
   const $protc = useStore($product)
-  let categories = ['ZMR','SANRIO','FABS','⭐️']
+  let categories = ['ZMR','TAYLOR SF','FABS','⭐️','SANRIO']
   const [isView, setIsView] = useState<boolean>(false)
   const handleCategory = ({e,category}: {e:any, category:string}) => {
     e.preventDefault()

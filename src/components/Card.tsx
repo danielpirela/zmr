@@ -60,8 +60,9 @@ export function Card({products} : Props) {
         ]
         if (product.category === String($protc.category)){
           return (
-            <div key={id} className='shadow-xl shadow-primary/15 rounded-lg my-4 py-4 px-4 translate-x-1 animate-fade-right delay-300 duration-500 transition-all ring-1 ring-primary/10'>
+            <div key={id} className='shadow-xl shadow-primary/15 rounded-lg my-4 py-4 px-4 translate-x-1 animate-fade-right delay-300 duration-500 transition-all ring-1 ring-primary/10 min-w-[350px]'>
             <button
+            className='flex justify-center items-center min-w-full'
             onClick={(e)=>{
               handleId(e,id)
               setIsHidden(false)
@@ -70,7 +71,7 @@ export function Card({products} : Props) {
           <img
             src={image}
             alt="product image zmr shop"
-            className='aspect-square max-w-72 max-h-72 rounded-lg'
+            className='aspect-square max-w-72 max-h-72 rounded-lg hover:scale-110 transition delay-200 duration-300'
             />
           </button>
           <h3 className='font-bold text-xl mt-2'>{name}</h3>
