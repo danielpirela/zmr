@@ -4,7 +4,7 @@ import { $isLogged } from '../store/useStore'
 import { useStore } from '@nanostores/react'
 
 export function ModalAdd (){
-    const isLogged = useStore($isLogged)
+  const isLogged = useStore($isLogged)
   const [isView, setIsView] = useState<boolean>(false)
   const [isError, setIsError] = useState<string>("")
   const avaliableModels : string[] = ['Blanco', 'Negro']
@@ -22,7 +22,7 @@ export function ModalAdd (){
             image: formData.get('image'),
         }
 
-        const res = await fetch("http://localhost:4321/api/tee.json", {
+        const res = await fetch("https://www.zmrclub.store/api/tee.json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export function ModalAdd (){
       }
 
       useEffect(() => {
-          if (isLogged.value === false) return window.location.replace("http://localhost:4321")
+          if (isLogged.value === 'false') return window.location.replace("https://www.zmrclub.store")
       },[isLogged.value])
 
    return (

@@ -1,5 +1,7 @@
-import { atom, map } from "nanostores"
+import { map } from "nanostores"
 import { persistentMap } from "@nanostores/persistent"
+import type { BooleanLiteral } from "typescript"
+import { string } from "astro/zod"
 // ? Types for slices
 
 interface Product {
@@ -8,10 +10,11 @@ interface Product {
 }
 
 export interface IsLogged {
-  value: true | false
+  value: "true" | "false"
 }
-export const $isLogged = persistentMap<IsLogged>("isLogged:", {
-  value: false,
+
+export const $isLogged = persistentMap("isLogged:", {
+  value: "false",
 })
 
 export const $product = map<Product>({

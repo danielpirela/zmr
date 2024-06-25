@@ -27,15 +27,15 @@ const handleSubmit = async (e:any) => {
 
     if (json.status !== 200){
         setIsError('Verification failed')
-        return  $isLogged.setKey('value',false)
+        return  $isLogged.setKey('value','false')
     }
 
     setIsError('Success')
-    $isLogged.setKey('value',true)
+    $isLogged.setKey('value','true')
 }
     useEffect(() =>{
         if (isError === 'Success'){
-            return window.location.replace("http://localhost:4321/admin")
+            return window.location.replace("https://www.zmrclub.store/admin")
         }
     },[isError])
 

@@ -69,14 +69,14 @@ export function Header() {
                             </a>
                         </li>
                         {
-                            isLogged === false ? (
+                            isLogged === 'false' ? (
                                 <li className='hidden'>enercusi</li>
                         ): (
                             <li className='flex px-4 hover:text-primary' >
                             <button
                                 onClick={(e) => {
                                     e.preventDefault()
-                                $isLogged.setKey("value", false)
+                                $isLogged.setKey("value", 'false')
                             }}
                         className='py-2 text-gray-800 rounded flex justify-center items-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-110 transition-all duration-200'
                     >
