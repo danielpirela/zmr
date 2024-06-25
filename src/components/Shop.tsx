@@ -17,6 +17,7 @@ export function Shop ({data}: Props) {
   const $protc = useStore($product)
   let categories = ['ZMR','TAYLOR S','FUNNY','⭐️','SANRIO','FABS']
   const [isView, setIsView] = useState<boolean>(false)
+
   const handleCategory = ({e,category}: {e:any, category:string}) => {
     e.preventDefault()
     $product.setKey('category', category)

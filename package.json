@@ -13,7 +13,9 @@
     "@astrojs/check": "^0.5.2",
     "@astrojs/react": "^3.0.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@nanostores/persistent": "^0.10.1",
     "@nanostores/react": "^0.7.1",
+    "@supabase/supabase-js": "^2.43.4",
     "@types/react-dom": "^18.2.19",
     "astro": "^4.3.5",
     "million": "^3.0.3",
@@ -22,15 +24,15 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "flowbite": "^2.2.1",
-    "tailwindcss-animated": "^1.0.1",
-    "typescript": "^5.3.3",
     "@types/react": "^18.2.55",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0"
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "flowbite": "^2.2.1",
+    "tailwindcss-animated": "^1.0.1",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "tailwindcss": "^3.0.0"

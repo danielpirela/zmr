@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { $isLogged } from "../store/useStore"
+import { ModalAdd } from "../components/ModalAdd.tsx"
+---
+
+<Layout title="admin">
+  <div
+    class="min-w-full min-h-screen mt-2 p-4 flex justify-center items-center"
+  >
+    <ModalAdd client:only />
+  </div>
+</Layout>

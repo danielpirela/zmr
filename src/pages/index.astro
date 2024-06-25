@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import products from "../utils/data.json"
 import { Shop } from "../components/Shop.tsx"
 import Hero from "../components/ui/Hero.astro"
+const response = await fetch("http://localhost:4321/api/tee.json")
+const { Tees } = await response.json()
 ---
 
 <Layout title="zmr">
@@ -12,7 +13,7 @@ import Hero from "../components/ui/Hero.astro"
     <Hero />
     <h1 class="text-4xl font-medium mb-3 mt-20 text-center">Catálogo</h1>
     <div class="flex justify-center items-center flex-col min-w-full">
-      <Shop data={products.products} client:only />
+      <Shop data={Tees} client:only />
     </div>
   </main>
 </Layout>

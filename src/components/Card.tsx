@@ -49,7 +49,7 @@ export function Card({products} : Props) {
     </button>
     </Modal>
 
-    <article className='flex justify-center items-center flex-col min-w-full min-h-auto'>
+    <article className='flex justify-center items-center flex-col min-w-full min-h-auto card'>
     {
       products.map((product : Product) =>{
         const {id,image,name,price, avaliableModels} = product
@@ -60,7 +60,7 @@ export function Card({products} : Props) {
         ]
         if (product.category === String($protc.category)){
           return (
-            <div key={id} className='shadow-xl shadow-primary/15 rounded-lg my-4 py-4 px-4 translate-x-1 animate-fade-right delay-300 duration-500 transition-all ring-1 ring-primary/10 min-w-[350px]'>
+            <div key={id} className='shadow-xl shadow-primary/15 rounded-lg my-4 py-4 px-4 translate-x-1 ring-1 ring-primary/10 min-w-[350px]'>
             <button
             className='flex justify-center items-center min-w-full'
             onClick={(e)=>{

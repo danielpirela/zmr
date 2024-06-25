@@ -1,11 +1,14 @@
+import { useStore } from '@nanostores/react'
+import { $isLogged } from '../../store/useStore.ts'
 import {Logo} from './Logo.tsx'
 import { useState } from 'react'
 export function Header() {
     const [isHidden, setIsHidden] = useState(true)
     const HiddenHandler = () => setIsHidden(!isHidden)
 
+    const isLogged = useStore($isLogged).value
     return (
-        <nav className='bg-transparent border-gray-200 dark:bg-gray-900 flex min-w-full justify-between shadow-lg transition-all delay-300 duration-300 animate-fade-down'>
+        <nav className='bg-whiteborder-gray-200 dark:bg-gray-900 min-w-full justify-between shadow-lg z-50 cilca'>
             <div className='flex flex-wrap items-center justify-between mx-0 p-4 flex-2 w-full'>
                 <a href={'/'} className='flex-1 w-auto'>
                     <Logo />
@@ -13,7 +16,7 @@ export function Header() {
                 <button
                     data-collapse-toggle='navbar-default'
                     type='button'
-                    className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+                    className=' inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100/20 focus:outline-none'
                     aria-controls='navbar-default'
                     aria-expanded='false'
                     onClick={HiddenHandler}
@@ -65,19 +68,31 @@ export function Header() {
                                 Contact
                             </a>
                         </li>
-                        <li className='hidden'>
-                            <a
-                                href='/login'
-                                className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-110 transition-all duration-200'
-                            >
-                                Login
-                            </a>
+                        {
+                            isLogged === false ? (
+                                <li className='hidden'>enercusi</li>
+                        ): (
+                            <li className='flex px-4 hover:text-primary' >
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault()
+                                $isLogged.setKey("value", false)
+                            }}
+                        className='py-2 text-gray-800 rounded flex justify-center items-center hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent hover:scale-110 transition-all duration-200'
+                    >
+                                Log out
+                                <svg className="w-[24px] h-[24px] pl-1  text-gray-800 dark:text-white hover:text-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+                            </svg>
+                            </button>
                         </li>
-                        <li className='hidden px-3 py-2  items-center justify-center rounded-md hover:scale-110 transition-all duration-200 md:bg-[#603721] md:text-white bg-transparent dark:text-white text-gray-900'>
+                            )
+                        }
+                    <li className='hidden px-3 py-2  items-center justify-center rounded-md hover:scale-110 transition-all duration-200 md:bg-[#603721] md:text-white bg-transparent dark:text-white text-gray-900'>
                             <a
                                 href='/register'
-                                className='block rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
-                            >
+                            className='block rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                        >
                                 Sign up
                             </a>
                         </li>

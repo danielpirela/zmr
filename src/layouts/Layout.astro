@@ -22,9 +22,13 @@ const { title } = Astro.props
     is:inline
     src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
   ></script>
-  <body class="justify-center items-center flex">
+  <script
+    is:inline
+    src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"
+  ></script>
+  <body class="flex justify-center items-center">
     <div
-      class="relative flex min-w-full min-h-screen flex-col overflow-hidden bg-slate-50 justify-center items-center"
+      class="relative flex min-w-full min-h-screen flex-col bg-slate-50 justify-center items-center"
     >
       <Header client:visible />
       <slot />
@@ -39,30 +43,39 @@ const { title } = Astro.props
     src: url("/fonts/Voga-Medium.otf");
     font: optional;
   }
-  html {
-    scroll-behavior: smooth;
-  }
-  ::-webkit-scrollbar {
-    border: none;
-  }
-  .animated {
-    animation: rotation 2s infinite linear;
+  .card {
+    animation: appear linear 0.2s;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
   }
 
-  @keyframes rotation {
+  .cilca {
+    position: sticky;
+    display: flex;
+    top: 0;
+    left: 0;
+    animation: enercusi linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 cover 200px;
+  }
+
+  .button-nav {
+  }
+  @keyframes appear {
     from {
-      transform: rotate(0deg);
+      opacity: 0;
+      scale: 0.2;
     }
     to {
-      transform: rotate(359deg);
+      opacity: 1;
+      scale: 1;
     }
   }
 
-  * {
-    @apply transition-colors duration-200;
-  }
-
-  #theme-button.active {
-    left: 29px;
+  @keyframes enercusi {
+    to {
+      background-color: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+    }
   }
 </style>
