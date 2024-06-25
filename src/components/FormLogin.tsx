@@ -35,7 +35,7 @@ const handleSubmit = async (e:any) => {
 }
     useEffect(() =>{
         if (isError === 'Success'){
-            return window.location.replace("https://www.zmrclub.store/admin")
+            return window.location.replace("http://localhost:4321/admin")
         }
     },[isError])
 

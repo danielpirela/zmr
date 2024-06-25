@@ -22,7 +22,7 @@ export function ModalAdd (){
             image: formData.get('image'),
         }
 
-        const res = await fetch("https://www.zmrclub.store/api/tee.json", {
+        const res = await fetch("http://localhost:4321/api/tee.json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
