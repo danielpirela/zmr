@@ -16,7 +16,7 @@ const handleSubmit = async (e:any) => {
     }
 
 
-    const res = await fetch("http://localhost:4321/api/login.json", {
+    const res = await fetch("https://localhost/api/login.json", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const handleSubmit = async (e:any) => {
 }
     useEffect(() =>{
         if (isError === 'Success'){
-            return window.location.replace("http://localhost:4321/admin")
+            return window.location.replace("https://localhost/admin")
         }
     },[isError])
 
