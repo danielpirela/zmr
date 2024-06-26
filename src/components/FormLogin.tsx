@@ -16,7 +16,7 @@ const handleSubmit = async (e:any) => {
     }
 
 
-    const res = await fetch("https://www.zmrclub.store/api/login.json", {
+    const res = await fetch("/api/login.json", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
