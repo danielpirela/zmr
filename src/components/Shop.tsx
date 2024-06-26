@@ -7,6 +7,7 @@ import { SearchIcon } from './ui/icons/Search'
 
 import type { Product } from '../utils/types'
 import { useState } from 'react'
+import { SkeletonCard } from './ui/SkeletonCard'
 
 interface Props {
     data: Product[]
@@ -78,8 +79,14 @@ export function Shop ({data}: Props) {
         </ul>
     </div>
     </nav>
-    <section className="flex justify-center items-center min-w-full h-auto">
-        <Card products={data} />
+    <section className="flex justify-start items-center min-w-full h-auto">
+        {
+          data.length > 0  ? (
+            <Card products={data} />
+          ) : (
+            <SkeletonCard/>
+          )
+        }
     </section>
     </>
   )

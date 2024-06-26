@@ -16,7 +16,7 @@ const handleSubmit = async (e:any) => {
     }
 
 
-    const res = await fetch("https://localhost/api/login.json", {
+    const res = await fetch("https://www.zmrclub.com/api/login.json", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const handleSubmit = async (e:any) => {
 }
     useEffect(() =>{
         if (isError === 'Success'){
-            return window.location.replace("https://localhost/admin")
+            return window.location.replace("https://www.zmrclub.com/admin")
         }
     },[isError])
 

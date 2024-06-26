@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro"
 import { Shop } from "../components/Shop.tsx"
 import Hero from "../components/ui/Hero.astro"
-const response = await fetch("http://localhost/api/tee.json")
+const response = await fetch("http://www.zmrclub.com/api/tee.json")
 const { Tees } = await response.json()
 ---
 
@@ -11,7 +11,9 @@ const { Tees } = await response.json()
     class="min-w-full min-h-screen bg-gray-50 flex flex-col justify-center items-center"
   >
     <Hero />
-    <h1 class="text-4xl font-medium mb-3 mt-20 text-center">Catálogo</h1>
+    <h1 id={"shop"} class="text-4xl font-medium mb-3 mt-20 text-center">
+      Catálogo
+    </h1>
     <div class="flex justify-center items-center flex-col min-w-full">
       <Shop data={Tees} client:only />
     </div>
