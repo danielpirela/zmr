@@ -7,6 +7,7 @@ import vercel from '@astrojs/vercel/serverless';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
+  site: 'https://zmrclub.store',
   vite: {
     plugins: [million.vite({
       mode: "react",
