@@ -22,7 +22,7 @@ export function ModalAdd (){
             image: formData.get('image'),
         }
 
-        const res = await fetch("/api/tee.json", {
+        const res = await fetch("/api/tee/tee.json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -39,7 +39,7 @@ export function ModalAdd (){
       }
 
       useEffect(() => {
-          if (isLogged.value === 'false') return window.location.replace("https://www.zmrclub.store")
+          if (isLogged.value === 'false') return window.location.replace("/")
       },[isLogged.value])
 
    return (

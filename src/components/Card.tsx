@@ -1,14 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Product } from "../utils/types"
 import { useStore } from '@nanostores/react'
-import { $product} from '../store/useStore'
+import { $product, $tees} from '../store/useStore'
 
 import {Cart} from "./ui/icons/Cart"
 import { Modal } from './Modal'
 import { ColorPicker } from './ui/ColorPicker'
 
+interface ITees {
+  category: string
+  name: string
+  id: number
+  price: number,
+  available: boolean,
+  avaliableModels: string,
+  image: string
+}
 interface Props {
-  products: Product[]
+  products: ITees[],
 }
 
 interface Color {
@@ -16,18 +25,19 @@ interface Color {
   hex: string
 }
 
-export function Card({products} : Props) {
-
+export function Card() {
   const $protc  = useStore($product)
+  const products = useStore($tees)
   const [isHidden, setIsHidden] = useState<boolean>(true)
 
-  const handleId = (e:any, id : string) => {
-    $product.setKey('id' , id)
+  const handleId = (e:any, id : number) => {
+    $product.setKey('id' , String(id))
   }
+
 
   return (
     <>
-    <Modal data={products} isHidden={isHidden}>
+    <Modal data={products.tees} isHidden={isHidden}>
     <button
                 className={`z-50 text-gray-400 bg-transparent  hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white absolute right-10 top-10 ${isHidden ? 'hidden' : 'flex'}`}
                 onClick={
@@ -48,10 +58,9 @@ export function Card({products} : Props) {
                     <span className="sr-only">Close modal</span>
     </button>
     </Modal>
-
     <article className='flex justify-start items-center flex-col min-w-full min-h-auto card'>
     {
-      products.map((product : Product) =>{
+      products.tees.map((product : ITees) =>{
         const {id,image,name,price, avaliableModels} = product
 
         const colors : Color[] = [

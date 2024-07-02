@@ -13,7 +13,6 @@ export function DarkMode() {
             html?.classList.remove('dark')
             //$('theme-button')?.classList.remove('active')
         }
-        console.log(isActive)
     }, [theme, isActive])
 
     const handleChange = () => {

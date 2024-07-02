@@ -16,7 +16,7 @@ const handleSubmit = async (e:any) => {
     }
 
 
-    const res = await fetch("/api/login.json", {
+    const res = await fetch("/api/login/login.json", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const handleSubmit = async (e:any) => {
 }
     useEffect(() =>{
         if (isError === 'Success'){
-            return window.location.replace("https://www.zmrclub.store/admin")
+            return window.location.replace("/admin")
         }
     },[isError])
 
@@ -92,9 +92,9 @@ const handleSubmit = async (e:any) => {
                                 viewBox="0 0 24 24"
                                 >
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M8 10V7a4 4 0 1 1 8 0v3h1a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h1Zm2-3a2 2 0 1 1 4 0v3h-4V7Zm2 6a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1Z"
-                                    clip-rule="evenodd"></path>
+                                    clipRule="evenodd"></path>
                             </svg>
                         </span>
                         <input

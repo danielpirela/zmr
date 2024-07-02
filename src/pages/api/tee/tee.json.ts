@@ -1,11 +1,21 @@
-import { supabase } from "../../utils/supabase"
+import { getTees } from "../../../services/tee"
+import { supabase } from "../../../utils/supabase"
 
 export async function GET() {
   const { data: Tees, error } = await supabase.from("Tees").select("*")
+  if (!Tees || Tees.length < 0) {
+    return new Response(
+      JSON.stringify({
+        error,
+        status: 200,
+      })
+    )
+  }
+
   return new Response(
     JSON.stringify({
       Tees,
-      error,
+      status: 200,
     })
   )
 }
@@ -13,8 +23,6 @@ export async function GET() {
 export async function POST({ request }: any) {
   const { category, name, price, available, avaliableModels, image } =
     await request.json()
-
-  console.log(category, name, price, available, avaliableModels, image)
 
   if (
     !category &&

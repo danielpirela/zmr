@@ -2,8 +2,17 @@ import { useStore } from '@nanostores/react'
 import type { Product } from '../utils/types'
 import { $product } from '../store/useStore'
 
+interface ITees {
+  category: string
+  name: string
+  id: number
+  price: number,
+  available: boolean,
+  avaliableModels: string,
+  image: string
+}
 interface Props {
-    data: Product[]
+    data: ITees[]
     isHidden: boolean
     children: React.ReactNode
 }
@@ -19,8 +28,8 @@ export function Modal({data , isHidden , children}: Props){
         <div className="relative bg-transparent  dark:bg-gray-700">
         <section className="flex justify-center items-center min-w-full h-auto ">
           {
-            data.map((product: Product) => {
-              if (product.id === $protc.id && isHidden === false) {
+            data.map((product: ITees) => {
+              if (product.id === Number($protc.id) && isHidden === false) {
                 return (
                   <img  key={product.id} src={product.image} className={`aspect-square max-x-md md:max-w-lg max-h-auto bg-transparent transition-all animate-fade-up delay-300 duration-300 ${isHidden ? 'translate-x-[-50px]' : ''}`}/>
                   )

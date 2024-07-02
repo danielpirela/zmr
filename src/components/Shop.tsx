@@ -1,28 +1,34 @@
 import { useStore } from '@nanostores/react'
-import { $product } from '../store/useStore'
+import { $product} from '../store/useStore'
 
 import { Card } from './Card'
 import { MenuIcon } from './ui/icons/Menu'
 import { SearchIcon } from './ui/icons/Search'
-
-import type { Product } from '../utils/types'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { SkeletonCard } from './ui/SkeletonCard'
-
-interface Props {
-    data: Product[]
+import { getTees } from '../services/tee'
+interface ITees {
+  category: string
+  name: string
+  id: number
+  price: number,
+  available: boolean,
+  avaliableModels: string,
+  image: string
 }
 
-export function Shop ({data}: Props) {
-
+export function Shop () {
   const $protc = useStore($product)
   let categories = ['ZMR','TAYLOR S','FUNNY','⭐️','SANRIO','FABS']
   const [isView, setIsView] = useState<boolean>(false)
-
   const handleCategory = ({e,category}: {e:any, category:string}) => {
     e.preventDefault()
     $product.setKey('category', category)
   }
+
+  useEffect(() => {
+        getTees()
+  },[])
 
   return (
     <>
@@ -80,13 +86,7 @@ export function Shop ({data}: Props) {
     </div>
     </nav>
     <section className="flex justify-start items-center min-w-full h-auto">
-        {
-          data.length > 0  ? (
-            <Card products={data} />
-          ) : (
-            <SkeletonCard/>
-          )
-        }
+      <Card/>
     </section>
     </>
   )
