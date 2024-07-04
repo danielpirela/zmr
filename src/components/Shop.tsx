@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/react'
-import { $product} from '../store/useStore'
+import { $categories, $product} from '../store/useStore'
 
 import { Card } from './Card'
 import { MenuIcon } from './ui/icons/Menu'
@@ -7,6 +7,7 @@ import { SearchIcon } from './ui/icons/Search'
 import { useEffect, useState } from 'react'
 import { SkeletonCard } from './ui/SkeletonCard'
 import { getTees } from '../services/tee'
+import { getCategories } from '../services/category'
 interface ITees {
   category: string
   name: string
@@ -19,7 +20,7 @@ interface ITees {
 
 export function Shop () {
   const $protc = useStore($product)
-  let categories = ['ZMR','TAYLOR S','FUNNY','⭐️','SANRIO','FABS']
+  const {categories} = useStore($categories)
   const [isView, setIsView] = useState<boolean>(false)
   const handleCategory = ({e,category}: {e:any, category:string}) => {
     e.preventDefault()
@@ -28,6 +29,7 @@ export function Shop () {
 
   useEffect(() => {
         getTees()
+        getCategories()
   },[])
 
   return (

@@ -14,7 +14,6 @@ interface ITees {
 export async function getTees() {
   if (window) {
     const { data: Tees } = await supabase.from("Tees").select("*")
-
     if (Tees && Tees.length > 0) {
       $tees.setKey("tees", Tees as ITees[])
     }

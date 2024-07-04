@@ -18,8 +18,12 @@ interface Tee {
   image: string
 }
 
-interface ITees {
+interface Tees {
   tees: Tee[]
+}
+
+interface Categories {
+  categories: string[]
 }
 
 export const $isLogged = persistentMap("isLogged:", {
@@ -31,4 +35,6 @@ export const $product = map<Product>({
   id: "",
 })
 
-export const $tees = map<ITees>({ tees: [] })
+export const $tees = map<Tees>({ tees: [] })
+
+export const $categories = map<Categories>({ categories: [] })
